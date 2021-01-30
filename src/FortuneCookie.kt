@@ -1,12 +1,12 @@
 fun main(args: Array<String>) {
     for (i in 0..9) {
-        var fortune: String = getFortuneCoookie()
+        val fortune: String = getFortune()
         println("Your fortune is: $fortune")
         if (fortune == "Take it easy and enjoy life!") break
     }
 }
 
-fun getFortuneCoookie():String {
+fun getFortune():String {
 
     val fortunes = listOf(
             "You will have a great day!",
@@ -18,10 +18,17 @@ fun getFortuneCoookie():String {
             "Treasure your friends because they are your greatest fortune."
     )
 
+    val birthday = getBirthday();
+
+    return when (birthday) {
+        28, 31 -> "Take your time!"
+        in 1..7 -> "Have a nice month!"
+        else -> fortunes[birthday % fortunes.size]
+    }
+
+}
+
+fun getBirthday(): Int {
     print("Enter your birthday: ")
-
-    val birthday: Int = readLine()?.toIntOrNull() ?: 1
-
-    return fortunes[birthday%fortunes.size]
-
+    return readLine()?.toIntOrNull() ?: 1
 }
