@@ -1,12 +1,17 @@
 fun main(args: Array<String>) {
-    for (i in 0..9) {
-        val fortune: String = getFortune()
+
+    var fortune = ""
+    var i = 0
+
+    while(!fortune.contains("Take it easy") && i < 10) {
+        fortune = getFortune()
         println("Your fortune is: $fortune")
-        if (fortune == "Take it easy and enjoy life!") break
+        i++
     }
+
 }
 
-fun getFortune():String {
+fun getFortune(): String {
 
     val fortunes = listOf(
             "You will have a great day!",
@@ -18,7 +23,7 @@ fun getFortune():String {
             "Treasure your friends because they are your greatest fortune."
     )
 
-    val birthday = getBirthday();
+    val birthday = getBirthday()
 
     return when (birthday) {
         28, 31 -> "Take your time!"
