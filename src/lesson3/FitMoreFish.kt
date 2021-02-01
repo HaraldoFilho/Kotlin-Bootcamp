@@ -1,3 +1,5 @@
+package lesson3
+
 fun main(args: Array<String>) {
     println(testCanAddFish(canAddFish(10.0, listOf(3,3,3)), false))
     println(testCanAddFish(canAddFish(8.0, listOf(2,2,2), hasDecorations = false), true))

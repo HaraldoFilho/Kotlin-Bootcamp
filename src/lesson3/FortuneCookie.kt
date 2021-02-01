@@ -1,3 +1,5 @@
+package lesson3
+
 fun main(args: Array<String>) {
 
     var fortune = ""
