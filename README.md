@@ -2,9 +2,9 @@
 
 ## Lessons
 
-1. Introduction
-2. Kotlin Basics
-3. Functions
+1. Introduction 🗸
+2. Kotlin Basics 🗸
+3. Functions 🗸
 4. Classes
 5. Kotlin Essentials: Beyond the Basics
 6. Function Manipulation
