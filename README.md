@@ -11,4 +11,4 @@
   
 ## Exercises
 
-The exercises for this course can be found at the directory [src](src/). 
+The exercises for this course can be found [here](src/). 
