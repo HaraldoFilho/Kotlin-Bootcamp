@@ -23,4 +23,20 @@ fun main(args: Array<String>) {
         print(spice.name + " ")
     }
 
+    println("\n----------------------------------------------------------------------")
+
+    val book1 = Book("1984", "George Orwell")
+    val book2 = Book("Brave New World", "Aldous Huxley")
+    val book3 = eBook("Fahrenheit 451", "Ray Bradbury")
+
+    book1.readPage()
+    book1.readPage()
+    book1.readPage()
+
+    book2.readPage()
+    book2.readPage()
+
+    book3.readPage()
+    book3.readPage()
+
 }
