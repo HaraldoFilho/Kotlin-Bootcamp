@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
 
 }
 
-abstract class Spice(val name: String, val spiciness: String = "mild", color: SpiceColor): SpiceColor by color {
+sealed class Spice(val name: String, val spiciness: String = "mild", color: SpiceColor): SpiceColor by color {
     abstract fun prepareSpice()
 }
 
@@ -24,15 +24,15 @@ interface Grinder {
 }
 
 interface SpiceColor {
-    val color: String
+    val color: Color
 }
 
 object YellowSpiceColor: SpiceColor {
-    override val color = "yellow"
+    override val color = Color.YELLOW
 }
 
 object RedSpiceColor: SpiceColor {
-    override val color = "red"
+    override val color = Color.RED
 }
 
 class Curry(name: String, spiciness: String,
@@ -61,4 +61,9 @@ class Pepper(name: String, spiciness: String,
 
 data class SpiceContainer(val spice: Spice) {
     val label = spice.name
+}
+
+enum class Color(val rgb: Int) {
+    RED(0xFF0000),
+    YELLOW(0xFFFF00);
 }
