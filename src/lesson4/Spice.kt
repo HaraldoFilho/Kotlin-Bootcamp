@@ -18,3 +18,4 @@ class Spice (val name: String, private val spiciness: String = "mild") {
     }
 
 }
+

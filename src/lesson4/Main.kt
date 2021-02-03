@@ -2,6 +2,15 @@ package lesson4
 
 fun main(args: Array<String>) {
 
+    println("\n----------------------------------------------------------------------\n")
+
+    val spice = SimpleSpice()
+
+    println("Spice: ${spice.name}")
+    println("Heat: ${spice.heat}")
+
+    println("\n----------------------------------------------------------------------\n")
+
     fun makeSalt() = Spice("salt", "light")
 
     val spicies = listOf(
@@ -19,11 +28,11 @@ fun main(args: Array<String>) {
 
     print("Less spicy: ")
     while (iterator.hasNext()) {
-        val spice = iterator.next()
-        print(spice.name + " ")
+        val next = iterator.next()
+        print(next.name + " ")
     }
 
-    println("\n----------------------------------------------------------------------")
+    println("\n\n----------------------------------------------------------------------\n")
 
     val book1 = Book("1984", "George Orwell")
     val book2 = Book("Brave New World", "Aldous Huxley")
@@ -38,5 +47,7 @@ fun main(args: Array<String>) {
 
     book3.readPage()
     book3.readPage()
+
+    println("\n----------------------------------------------------------------------\n")
 
 }
